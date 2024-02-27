@@ -2,6 +2,9 @@ function divideNumbers(a, b) {
   if (typeof a !== "number" || typeof b !== "number") {
     throw new Error("Both arguments must be numbers");
   }
+  if (b !== 0) {
+    throw new Error("Can't divide by zero");
+  }
   return a / b;
 }
 
