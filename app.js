@@ -1,7 +1,13 @@
 function divideNumbers(a, b) {
-// Test cases
+  // Test cases
+  if (isNaN(a) || isNaN(b)) {
+    throw new Error("Both arguments must be numbers");
+  }
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
 
-
+  return a / b;
 }
 
 try {
