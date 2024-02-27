@@ -1,7 +1,11 @@
 function divideNumbers(a, b) {
-// Test cases
-
-
+  // Test cases
+  if (typeof a != "number" || typeof b != "number") {
+    throw new Error("Both arguments must be numbers");
+  } else if (b == 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return a / b;
 }
 
 try {
